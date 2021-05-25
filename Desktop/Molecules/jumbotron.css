@@ -1,0 +1,7 @@
+.jumbotron {
+    background-image: url(images/deux.jpg);
+}
+
+h1, p {
+    color: aliceblue;
+}
