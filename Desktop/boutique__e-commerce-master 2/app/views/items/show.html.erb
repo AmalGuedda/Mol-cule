@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @item.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @item.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @item.price %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @item.image_url %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @item.user %>
+</p>
+
+<div class="container container-show">
+
+    <div class="d-flex flex-row justify-content-center">
+<div class="card show-card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h2 class="card-title">titre : <%= @item.title %></h2>
+    <p class="card-text">description : <%= @item.description %></p>
+    <h3 class="card-text">prix : <%= @item.price %> €</h3>
+    <%= button_to "Buy now!", root_path %>
+    <a href="carts#show" class="btn btn-primary">Ajouter au panier</a>
+  </div>
+</div>
+</div>
+
+</div>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>
