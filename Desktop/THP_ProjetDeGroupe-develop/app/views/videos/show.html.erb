@@ -1,0 +1,43 @@
+<STYLE>
+
+.vid{
+  display:flex;
+  flex-direction: column;
+  
+}
+
+</STYLE>
+
+
+<body>
+<div class="container vid">
+
+  <h1>Votre contenu a été posté avec succès</h1>
+  <br>
+  <h3><%=@video.title %></h3>
+
+  <br>
+
+  <div style="width:400px; height:400px">
+  <%= video_tag(url_for(@video.clip), style:'width:100%;height:auto', controls:'') %>
+  <br>
+  <p> <%=@video.description %></p>
+  </div>
+
+
+
+  <div class="field>
+  <%= link_to "Editer", edit_video_path(@video.id) %>
+  <%= link_to "Supprimer", video_path(@video.id), method: :delete %>
+  <%= link_to "Revenir en arrière", videos_path %>
+  </div>
+
+
+  <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+ 
+ </div>
+</body>
+
+
+
+
